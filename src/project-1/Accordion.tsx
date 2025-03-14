@@ -1,5 +1,14 @@
-const Accordion = () => {
-    return <></>
-}
+import ComponentWrapper from '../components/ComponentWrapper';
+import AccordionWithDetailElements from './WithDetailElement';
+import AccordionWithDivElements from './WithDivElement';
 
-export default Accordion
+const Accordion = () => {
+    return (
+        <ComponentWrapper view="viewport">
+            <AccordionWithDetailElements />
+            <AccordionWithDivElements />
+        </ComponentWrapper>
+    );
+};
+
+export default Accordion;

@@ -1,2 +1,25 @@
-@use './project-1/accordion.scss';
+/*
+  Import projects here
+*/
+@use './project-1/_accordion';
 
+
+/* 
+  Global
+*/
+@use '_reset';
+
+#root {
+  width: 100%;
+}
+
+.viewport {
+  height: 100dvh;
+}
+
+.base {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 1rem;
+}
