@@ -1,0 +1,21 @@
+.random-color {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+
+    &__buttons {
+        display: grid;
+        gap: 1rem;
+    }
+    &__name {
+        background-color: white;
+        border-radius: .5rem;
+        padding: 2rem 3rem;
+        
+        p {
+            color: black;
+            font-size: clamp(1rem, 5vw, 2rem);
+        } 
+    }
+}
