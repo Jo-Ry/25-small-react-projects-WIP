@@ -1,54 +1,47 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains 25 small React projects that I created to help master React development. By building these projects, I gained hands-on experience with various React concepts and techniques, preparing myself for job interviews as a React developer. These projects are inspired by the video series "Master React by building 25 different projects."
 
-Currently, two official plugins are available:
+## How to Run the Projects
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Follow these steps to set up and run the projects:
 
-## Expanding the ESLint configuration
+1. **Clone the repository**:
+  ```sh
+  git clone https://github.com/your-username/25-small-react-projects.git
+  cd 25-small-react-projects
+  ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Install dependencies**:
+  Make sure you have [Node.js](https://nodejs.org/) installed. Then, run:
+  ```sh
+  npm install
+  ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. **Run the development server**:
+  ```sh
+  npm run dev
+  ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+4. **Open the project in your browser**:
+  Open your browser and navigate to `http://localhost:3000` to see the project running.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+5. **Build the project for production**:
+  ```sh
+  npm run build
+  ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+6. **Preview the production build**:
+  ```sh
+  npm run serve
+  ```
+
+  Open your browser and navigate to `http://localhost:5000` to preview the production build.
+
+7. **Lint and format the code**:
+  ```sh
+  npm run lint
+  npm run format
+  ```
+
+Follow these steps for each project within the repository.
