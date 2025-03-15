@@ -4,7 +4,6 @@
 @use './project-1/_accordion';
 @use './project-2/randomColorGenerator';
 
-
 /* 
   Global
 */
@@ -23,4 +22,10 @@
   justify-content: center;
   align-items: center;
   padding-inline: 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 4rem);
+  padding-block-start: 2rem;
 }

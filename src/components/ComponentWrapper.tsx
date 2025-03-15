@@ -2,14 +2,18 @@ import { CSSProperties, ReactNode } from 'react';
 
 type ComponentWrapperType = {
     view: 'viewport' | 'fill';
-    children: ReactNode;
+    title?: string
     style?: CSSProperties
+    children: ReactNode;
 };
 
-const ComponentWrapper = ({ view, style, children }: ComponentWrapperType) => {
+const ComponentWrapper = ({ view, title, style, children }: ComponentWrapperType) => {
     return (
-        <section className= {`base ${view === 'fill' ? '' : 'viewport'}`} style={style}>
+        <section style={style}>
+            <h2 className='title'>{title}</h2>
+            <div className= {`base ${view === 'fill' ? '' : 'viewport'}`}>
             {children}
+            </div>
         </section>
     );
 };
