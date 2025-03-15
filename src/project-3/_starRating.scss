@@ -1,0 +1,31 @@
+.star-rating {
+    display: flex;
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .star {
+        width: clamp(27px, 5vw, 70px);
+        aspect-ratio: 1;
+        cursor: pointer;
+        background-color: black;
+        clip-path: polygon(
+            50% 0,
+            calc(50% * (1 + sin(0.4turn))) calc(50% * (1 - cos(0.4turn))),
+            calc(50% * (1 - sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+            calc(50% * (1 + sin(0.2turn))) calc(50% * (1 - cos(0.2turn))),
+            calc(50% * (1 - sin(0.4turn))) calc(50% * (1 - cos(0.4turn)))
+        );
+
+        &.active {
+            background-color: #f8ca00;
+        }
+        
+        &.inactive {
+            background-color: black;
+        }
+    }
+}
