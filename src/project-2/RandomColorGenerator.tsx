@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ComponentWrapper from '../components/ComponentWrapper';
 
 const RandomColorGenerator = () => {
-    const [color, setcolor] = useState('#000');
+    const [color, setcolor] = useState('#aabbda');
     const [colorType, setcolorType] = useState<'hex' | 'rgb'>('hex');
 
     /**
