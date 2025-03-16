@@ -67,58 +67,58 @@ const AccordionWithDivElements = () => {
     };
 
     return (
-        <ComponentWrapper view="viewport" style={{ flex: '1' }}>
-            <div className="multi-selection">
-                <div className={`button-wrapper ${allowMultiple === true ? 'active' : ''}`}>
-                    <button
-                        onClick={() => {
-                            setAllowMultiple(!allowMultiple);
+        <div className="multi-selection">
+            <div className={`button-wrapper ${allowMultiple === true ? 'active' : ''}`}>
+                <button
+                    onClick={() => {
+                        setAllowMultiple(!allowMultiple);
 
-                            // reset
-                            setSelectedItems([]);
-                            setSelectedItem({} as winnieThePoohStoriesType);
-                        }}
-                    >
-                        {allowMultiple === false ? 'Enable multiselection' : 'Disable multiselection'}
-                    </button>
-                </div>
-                <div className="accordion">
-                    <p><code>{`Based on <div></div> element`}</code></p>
-                    {winnieThePoohStories && winnieThePoohStories.length !== 0 ? (
-                        winnieThePoohStories.map(story => (
-                            <div key={story.id} className="accordion-wrapper">
-                                <div
-                                    className="summary"
-                                    onClick={
-                                        allowMultiple
-                                            ? () => selectMultipleAccordions(story.id)
-                                            : () => selectSingleAccordion(story)
-                                    }
-                                >
-                                    {story.summary}
-                                </div>
-                                <div
-                                    className={`content-wrapper ${
-                                        selectedItems.includes(story.id) || selectedItem?.id === story.id
-                                            ? 'pressed'
-                                            : ''
-                                    }`}
-                                >
-                                    <div>
-                                        {(allowMultiple && selectedItems.includes(story.id)) ||
-                                        selectedItem?.id === story.id
-                                            ? story.content
-                                            : null}
-                                    </div>
+                        // reset
+                        setSelectedItems([]);
+                        setSelectedItem({} as winnieThePoohStoriesType);
+                    }}
+                >
+                    {allowMultiple === false ? 'Enable multiselection' : 'Disable multiselection'}
+                </button>
+            </div>
+            <div className="accordion">
+                <p>
+                    <code>{`Based on <div></div> element`}</code>
+                </p>
+                {winnieThePoohStories && winnieThePoohStories.length !== 0 ? (
+                    winnieThePoohStories.map(story => (
+                        <div key={story.id} className="accordion-wrapper">
+                            <div
+                                className="summary"
+                                onClick={
+                                    allowMultiple
+                                        ? () => selectMultipleAccordions(story.id)
+                                        : () => selectSingleAccordion(story)
+                                }
+                            >
+                                {story.summary}
+                            </div>
+                            <div
+                                className={`content-wrapper ${
+                                    selectedItems.includes(story.id) || selectedItem?.id === story.id
+                                        ? 'pressed'
+                                        : ''
+                                }`}
+                            >
+                                <div>
+                                    {(allowMultiple && selectedItems.includes(story.id)) ||
+                                    selectedItem?.id === story.id
+                                        ? story.content
+                                        : null}
                                 </div>
                             </div>
-                        ))
-                    ) : (
-                        <div>no items </div>
-                    )}
-                </div>
+                        </div>
+                    ))
+                ) : (
+                    <div>no items </div>
+                )}
             </div>
-        </ComponentWrapper>
+        </div>
     );
 };
 

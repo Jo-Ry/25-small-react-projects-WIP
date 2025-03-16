@@ -31,7 +31,7 @@ const AccordionWithDetailElements = () => {
     };
 
     return (
-        <ComponentWrapper view="viewport" style={{ flex: '1' }}>
+        
             <div className="multi-selection">
                 <div className={`button-wrapper ${allowMultiple === true ? 'active' : ''}`}>
                     <button
@@ -60,7 +60,7 @@ const AccordionWithDetailElements = () => {
                     ))}
                 </div>
             </div>
-        </ComponentWrapper>
+        
     );
 };
 

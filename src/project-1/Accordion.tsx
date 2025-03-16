@@ -4,7 +4,7 @@ import AccordionWithDivElements from './WithDivElement';
 
 const Accordion = () => {
     return (
-        <ComponentWrapper view="viewport">
+        <ComponentWrapper view="fill" className='accordions'>
             <AccordionWithDetailElements />
             <AccordionWithDivElements />
         </ComponentWrapper>
