@@ -1,0 +1,47 @@
+.image-slider {
+    position: relative;
+
+    &-images {
+        height: 330px;
+        width: clamp(250px, 71vw, 500px);
+
+        .current-image {
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+        }
+
+        &__left-arrow,
+        &__right-arrow,
+        .current-indicators {
+            position: absolute;
+            z-index: 2;
+        }
+
+        &__left-arrow {
+            top: 150px;
+        }
+
+        &__right-arrow {
+            right: 0;
+            top: 150px;
+        }
+
+        .current-indicators {
+            inset: 0;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 0.5rem;
+            padding-block-end: .5rem;
+
+            .current-indicator {
+                width: .7rem;
+                height: .7rem;
+                border-radius: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+}
