@@ -1,0 +1,33 @@
+// overide the base class from app.scss
+.base {
+    display: initial !important;
+}
+
+.load-more-data {
+    padding-block-start: 2rem;
+    margin-block-end: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding-inline: 1rem;
+    max-width: 1400px;
+    margin-inline: auto;
+
+    .product {
+        border-radius: .5rem;
+        box-shadow: 0px 0px 8px #8f8f8f;
+        padding: 1rem;
+    }
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    button {
+        background-color: aquamarine;
+        padding-inline: 4rem;
+        margin-block-end: 4rem;
+    }
+}
