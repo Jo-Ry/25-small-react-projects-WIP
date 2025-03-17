@@ -12,7 +12,6 @@ type imageObject = {
 
 const ImageSlider = () => {
     const [images, setImages] = useState<imageObject[] | null>(null);
-    const [image, setImage] = useState<imageObject | null>(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string>('');
@@ -76,9 +75,6 @@ const ImageSlider = () => {
         }
     };
 
-    console.log(images);
-    console.log(currentImageIndex);
-
     return (
         <ComponentWrapper view="viewport" title="Image slider" style={{ backgroundColor: 'beige' }}>
             <div className="image-slider">
@@ -118,3 +114,19 @@ const ImageSlider = () => {
 };
 
 export default ImageSlider;
+
+
+
+/*
+                    // create a copy array with the new objects and the exisiting data 
+                    const updatedProducts = [...originalObject.products, ...result.products];
+
+                    // extract the last 10 items from the newly updated array
+                    const last10Products = updatedProducts.slice(-10);
+
+                    // when user press the load more button for the first time ? spread the result from the fetch : spread the last 10  
+                    return {
+                        ...originalObject,
+                        products: [...originalObject.products, ...(originalObject.products.length < 10 ? result.products : last10Products)],
+                    };
+                    */
