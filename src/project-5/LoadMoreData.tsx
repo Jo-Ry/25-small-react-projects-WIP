@@ -89,7 +89,7 @@ const LoadMoreData = () => {
         <ComponentWrapper view="fill" title="Pagination">
             <div className="load-more-data">
                 {data?.products.map(prdouct => (
-                    <div className="product">
+                    <div key={prdouct.id} className="product">
                         <p>{prdouct.title}</p>
                         <p>{prdouct.price} $</p>
                     </div>
