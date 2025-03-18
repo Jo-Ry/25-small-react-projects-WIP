@@ -56,7 +56,7 @@ const SideMenu = () => {
     };
 
     return (
-        <ComponentWrapper view="" className="fill">
+        <ComponentWrapper view="" className="viewport">
             <aside className="side-menu">
                 <MenuList list={menus} />
             </aside>
