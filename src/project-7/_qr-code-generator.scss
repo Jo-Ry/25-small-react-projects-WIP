@@ -1,0 +1,49 @@
+.qr-code-generator {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+        display: flex;
+        gap: 1rem;
+        margin-block-end: 1rem;
+    }
+
+    input {
+        width: 250px;
+
+        &.wiggle {
+            animation-name: wiggle;
+            animation-duration: 500ms;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+        }
+
+        @keyframes wiggle {
+            0% {
+                transform: translate(2px, 0px);
+            }
+            20% {
+                transform: translate(-2px, 0px);
+            }
+            40% {
+                transform: translate(2px, 0px);
+            }
+            60% {
+                transform: translate(-2px, 0px);
+            }
+            80% {
+                transform: translate(2px, 0px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+    }
+
+    .qr-code {
+        height: clamp(250px, 27vw, 500px);
+        aspect-ratio: 1;
+    }
+}
