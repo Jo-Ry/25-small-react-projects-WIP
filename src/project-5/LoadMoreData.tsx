@@ -77,24 +77,20 @@ const LoadMoreData = () => {
         }
     };
 
-    if (errorMsg !== '' || isLoading) {
-        return (
-            <ComponentWrapper view="viewport" title="Pagination">
-                <p>{isLoading ? 'Loading...' : errorMsg}</p>
-            </ComponentWrapper>
-        );
-    }
-
     return (
-        <ComponentWrapper view="fill" title="Pagination">
-            <div className="load-more-data">
-                {data?.products.map(prdouct => (
-                    <div key={prdouct.id} className="product">
-                        <p>{prdouct.title}</p>
-                        <p>{prdouct.price} $</p>
-                    </div>
-                ))}
-            </div>
+        <ComponentWrapper view="" className="fill" title="Pagination">
+            {errorMsg == '' || !isLoading ? (
+                <div className="load-more-data">
+                    {data?.products.map(prdouct => (
+                        <div key={prdouct.id} className="product">
+                            <p>{prdouct.title}</p>
+                            <p>{prdouct.price} $</p>
+                        </div>
+                    ))}
+                </div>
+            ) : (
+                <p>{isLoading ? 'Loading...' : errorMsg}</p>
+            )}
             <div className="button-wrapper">
                 <button onClick={() => handlePagination()}>load more</button>
             </div>
