@@ -1,0 +1,64 @@
+.theme {
+    h2,
+    h3,
+    p {
+        margin-block-end: 1rem;
+    }
+
+    h2 {
+        font-weight: 700;
+        font-size: clamp(35px, 3.6vw, 50px);
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    .display-theme {
+        display: flex;
+        gap: 0.7rem;
+        p {
+            font-weight: 400;
+            font-size: 1.3rem;
+            
+        }
+
+        span {
+            font-weight: 600;
+            text-decoration: underline;
+        }
+    }
+}
+
+// modes -> dark or light
+.dark {
+    background-color: black;
+
+    h2,
+    h3,
+    span,
+    p {
+        color: white;
+    }
+
+    button {
+        background-color: white;
+        color: black;
+    }
+}
+
+.light {
+    background-color: white;
+
+    h2,
+    h3,
+    p {
+        color: black;
+    }
+
+    button {
+        background-color: white;
+        color: black;
+    }
+}

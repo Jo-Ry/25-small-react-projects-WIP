@@ -6,10 +6,12 @@ import ImageSlider from './project-4/ImageSlider';
 import LoadMoreData from './project-5/LoadMoreData';
 import SideMenu from './project-6/SideMenu';
 import QrCodeGenerator from './project-7/QrCodeGenerator';
+import Theme from './project-8/Theme';
 
 function App() {
     return (
         <>
+            <Theme/>
             <QrCodeGenerator/>
             <SideMenu/>
             <LoadMoreData/>
