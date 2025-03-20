@@ -1,0 +1,33 @@
+.tabs {
+    &__nav {
+        padding-block-end: 1rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+
+        &-item {
+            padding-block: 0.5rem;
+            padding-inline: 1rem;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #e0e0e0;
+            }
+
+            &.active {
+                background-color: #333;
+                color: white;
+            }
+        }
+    }
+
+    &__content {
+        max-width: 700px;
+        text-align: center;
+    }
+}

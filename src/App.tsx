@@ -1,5 +1,7 @@
 import './App.scss';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Accordion from './project-1/Accordion';
+import Tabs from './project-10/Tabs';
 import RandomColorGenerator from './project-2/RandomColorGenerator';
 import StarRating from './project-3/StarRating';
 import ImageSlider from './project-4/ImageSlider';
@@ -10,19 +12,31 @@ import Theme from './project-8/Theme';
 import CustomScrollbar from './project-9/CustomScrollbar';
 
 function App() {
+    return <RouterProvider router={router}></RouterProvider>;
+}
+
+export default App;
+
+const Components = () => {
     return (
         <>
-            <CustomScrollbar/>
-            <Theme/>
-            <QrCodeGenerator/>
-            <SideMenu/>
-            <LoadMoreData/>
+            <Tabs />
+            <CustomScrollbar />
+            <Theme />
+            <QrCodeGenerator />
+            <SideMenu />
+            <LoadMoreData />
             <ImageSlider />
             <StarRating />
             <RandomColorGenerator />
             <Accordion />
         </>
     );
-}
+};
 
-export default App;
+const router = createBrowserRouter([
+    {
+        path: '',
+        element: <Components />,
+    },
+]);

@@ -12,6 +12,7 @@
 @use './project-7/qr-code-generator';
 @use './project-8/theme';
 @use './project-9/custom-scroll-bar';
+@use './project-10/tabs';
 
 /* 
   Global
@@ -47,3 +48,13 @@
     font-size: clamp(2rem, 5vw, 4rem);
     padding-block-start: 2rem;
 }
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
