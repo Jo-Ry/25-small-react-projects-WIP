@@ -32,7 +32,6 @@ const CustomScrollbar = () => {
         'https://dummyjson.com/products?limit=100&select=title',
     );
 
-    // This function will effectively execute every time the user scrolls
     /**
      * Handles the scroll event and calculates the scroll progress.
      * 
