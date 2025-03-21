@@ -11,6 +11,7 @@ import QrCodeGenerator from './project-7/QrCodeGenerator';
 import Theme from './project-8/Theme';
 import CustomScrollbar from './project-9/CustomScrollbar';
 import Modal from './project-11/Modal';
+import GithubProfileFinder from './project-12/GithubProfileFinder';
 
 function App() {
     return <RouterProvider router={router}></RouterProvider>;
@@ -21,6 +22,7 @@ export default App;
 const Components = () => {
     return (
         <>
+            <GithubProfileFinder />
             <Modal />
             <Tabs />
             <CustomScrollbar />
