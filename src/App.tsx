@@ -10,6 +10,7 @@ import SideMenu from './project-6/SideMenu';
 import QrCodeGenerator from './project-7/QrCodeGenerator';
 import Theme from './project-8/Theme';
 import CustomScrollbar from './project-9/CustomScrollbar';
+import Modal from './project-11/Modal';
 
 function App() {
     return <RouterProvider router={router}></RouterProvider>;
@@ -20,6 +21,7 @@ export default App;
 const Components = () => {
     return (
         <>
+            <Modal />
             <Tabs />
             <CustomScrollbar />
             <Theme />
