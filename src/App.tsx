@@ -12,6 +12,7 @@ import Theme from './project-8/Theme';
 import CustomScrollbar from './project-9/CustomScrollbar';
 import Modal from './project-11/Modal';
 import GithubProfileFinder from './project-12/GithubProfileFinder';
+import SearchAutoCompleteApi from './project-13/SearchAutoCompleteApi';
 
 function App() {
     return <RouterProvider router={router}></RouterProvider>;
@@ -22,6 +23,7 @@ export default App;
 const Components = () => {
     return (
         <>
+            <SearchAutoCompleteApi />
             <GithubProfileFinder />
             <Modal />
             <Tabs />
