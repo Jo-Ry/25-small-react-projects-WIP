@@ -16,6 +16,7 @@
 @use './project-11/modal';
 @use './project-12/github-profile-finder';
 @use './project-13/search-autocomplete-api';
+@use './project-14/tic-tac-toe';
 
 /* 
   Global
@@ -50,6 +51,7 @@
     text-align: center;
     font-size: clamp(2rem, 5vw, 4rem);
     padding-block-start: 2rem;
+    pointer-events: none;
 }
 
 .visually-hidden {

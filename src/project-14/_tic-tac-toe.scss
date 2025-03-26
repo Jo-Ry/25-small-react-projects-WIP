@@ -1,0 +1,257 @@
+.tic-tac-toe--title {
+    text-align: left !important;
+    padding-inline-start: 3.6rem;
+    text-decoration: underline;
+    margin-block-end: 1.9rem;
+    text-underline-offset: 0.8rem;
+}
+
+.tic-tac-toe {
+    display: flex;
+    padding-inline: 1rem;
+
+    aside {
+        width: 340px;
+
+        menu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            > li {
+                list-style: none;
+                font-size: clamp(1rem, 2vw, 1.4rem);
+                font-weight: 600;
+                padding: 0.8rem 1.6rem;
+                background-color: #fff1dea6;
+                border-radius: 0.5rem;
+                width: max-content;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #fff1decc;
+                }
+
+                &[aria-disabled='true'] {
+                    pointer-events: none;
+                    background-color: #fff1de67;
+                }
+            }
+        }
+    }
+
+    &__settings {
+        padding-inline-start: 0.5rem;
+
+        &-radio {
+            padding-block: 0.5rem 1.3rem;
+            flex-direction: column;
+            display: flex;
+            gap: 0.5rem;
+
+            input[type='radio'] {
+                appearance: none;
+                width: 1.2rem;
+                height: 1.2rem;
+                border: 2px solid #ccc;
+                border-radius: 50%;
+                position: relative;
+                cursor: pointer;
+                transition: border-color 0.3s ease;
+                margin-block-end: 0.1rem;
+
+                &:checked {
+                    border-color: #fff1decc;
+                }
+
+                &:checked::before {
+                    content: '';
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    border-radius: 50%;
+                    background-color: #fff1decc;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                }
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-weight: 600;
+            }
+        }
+
+        &-button {
+            margin-bottom: 1rem;
+        }
+
+        &-select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            appearance: none;
+            width: 250px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 4"><path fill="%23333" d="M2 5L0 0h4z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 0.5rem center;
+            background-size: 0.65rem auto;
+
+            &:focus {
+                outline: none;
+                border-color: #007bff;
+                box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+
+            &::-ms-expand {
+                display: none;
+            }
+        }
+
+        &-option {
+            padding: 0.2rem;
+        }
+    }
+
+    &__board {
+        pointer-events: none;
+        margin-inline: auto;
+        padding-inline: 1rem;
+
+        &--started {
+            pointer-events: initial;
+        }
+
+        &-current-player-name {
+            font-size: clamp(1rem, 2vw, 1.4rem);
+            margin-block-end: 1rem;
+            font-weight: 600;
+
+            // This style sets the opacity to 0, making the element invisible to the user
+            // while maintaining the height of the text content.
+            &--hide {
+                opacity: 0;
+            }
+
+            & span {
+                font-weight: 400;
+            }
+        }
+
+        &-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: clamp(300px, 61vw, 600px);
+            height: clamp(300px, 61vw, 600px);
+            padding: 1rem;
+        }
+
+        &-tile {
+            background-color: transparent;
+
+            p {
+                font-size: clamp(1.5rem, 4vw, 3rem);
+
+                &.pop-in {
+                    animation: pop-in 0.3s ease-out;
+                }
+            }
+
+            $tic-tac-toe-tile-border-width: 6px;
+            $tic-tac-toe-tile-border-color: #0da192;
+
+            &:disabled {
+                color: inherit;
+                cursor: initial;
+            }
+
+            &:hover {
+                border-color: transparent;
+            }
+
+            &:hover:not(:disabled) {
+                background-color: #0da1924b;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:focus-visible {
+                outline: 4px auto -webkit-focus-ring-color;
+            }
+
+            //  Applies a bottom border to the first three cells (top row).
+            &:nth-child(-n + 3) {
+                border-bottom: $tic-tac-toe-tile-border-width solid $tic-tac-toe-tile-border-color;
+            }
+
+            // Applies a right border to the first two cells in each row.
+            &:nth-child(-n + 2) {
+                border-right: $tic-tac-toe-tile-border-width solid $tic-tac-toe-tile-border-color;
+            }
+
+            // Applies a bottom border to the fourth, fifth, and sixth cells (middle row).
+            &:nth-child(n + 4):nth-child(-n + 6) {
+                border-bottom: $tic-tac-toe-tile-border-width solid $tic-tac-toe-tile-border-color;
+            }
+
+            // Applies a right border to the fourth and fifth cells in each row.
+            &:nth-child(n + 4):nth-child(-n + 5) {
+                border-right: $tic-tac-toe-tile-border-width solid $tic-tac-toe-tile-border-color;
+            }
+
+            //  Applies a right border to the seventh and eighth cells in each row.
+            &:nth-child(n + 7):nth-child(-n + 8) {
+                border-right: $tic-tac-toe-tile-border-width solid $tic-tac-toe-tile-border-color;
+            }
+
+            &:focus-visible {
+                border: 1solid green;
+            }
+
+            @keyframes pop-in {
+                0% {
+                    transform: scale(0.5);
+                    opacity: 0;
+                }
+                50% {
+                    transform: scale(1.4);
+                    opacity: 0.5;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        aside menu {
+            align-items: center;
+            padding: 0;
+        }
+
+        &__board-current-player-name {
+            text-align: center;
+        }
+    }
+}

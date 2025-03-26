@@ -13,6 +13,7 @@ import CustomScrollbar from './project-9/CustomScrollbar';
 import Modal from './project-11/Modal';
 import GithubProfileFinder from './project-12/GithubProfileFinder';
 import SearchAutoCompleteApi from './project-13/SearchAutoCompleteApi';
+import TicTacToe from './project-14/TictTacToe';
 
 function App() {
     return <RouterProvider router={router}></RouterProvider>;
@@ -23,6 +24,7 @@ export default App;
 const Components = () => {
     return (
         <>
+            <TicTacToe />
             <SearchAutoCompleteApi />
             <GithubProfileFinder />
             <Modal />
