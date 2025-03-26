@@ -20,7 +20,6 @@ type usersType =
 const SearchAutoCompleteApi = () => {
     const [search, setSearch] = useState<string>('');
     const [data, setData] = useState<usersType>(null);
-    console.log('🚀 ~ SearchAutoCompleteApi ~ data:', data);
 
     // debouncing the search term to avoid making api calls on every key stroke
     const debouncedSearchTerm = useDebounce({ value: search, delay: 300 });
