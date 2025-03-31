@@ -24,7 +24,7 @@ Follow these steps to set up and run the projects:
   ```
 
 4. **Open the project in your browser**:
-  Open your browser and navigate to `http://localhost:3000` to see the project running.
+  Open your browser and navigate to vite default port `http://localhost:5173` to see the project running.
 
 5. **Build the project for production**:
   ```sh
