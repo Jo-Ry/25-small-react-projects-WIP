@@ -14,6 +14,8 @@ import Modal from './project-11/Modal';
 import GithubProfileFinder from './project-12/GithubProfileFinder';
 import SearchAutoCompleteApi from './project-13/SearchAutoCompleteApi';
 import TicTacToe from './project-14/TictTacToe';
+import FeatureFlags from './project-15/FeatureFlags';
+import FeatureFlagsProvider from './project-15/Context';
 
 function App() {
     return <RouterProvider router={router}></RouterProvider>;
@@ -24,6 +26,9 @@ export default App;
 const Components = () => {
     return (
         <>
+            <FeatureFlagsProvider>
+                <FeatureFlags />
+            </FeatureFlagsProvider>
             <TicTacToe />
             <SearchAutoCompleteApi />
             <GithubProfileFinder />
@@ -37,7 +42,8 @@ const Components = () => {
             <ImageSlider />
             <StarRating />
             <RandomColorGenerator />
-            <Accordion />
+            <Accordion /> 
+           
         </>
     );
 };
