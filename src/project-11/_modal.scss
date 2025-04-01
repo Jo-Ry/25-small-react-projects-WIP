@@ -1,4 +1,14 @@
 .modal {
+  gap: 4rem;
+
+  &__container {
+    border: 1px solid black;
+    padding: 1rem;
+  }
+
+  & .hide {
+    display: none;
+  }
 
   &::backdrop {
     background-color: rgba($color: #000000, $alpha: 0.5);
