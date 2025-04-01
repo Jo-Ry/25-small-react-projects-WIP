@@ -42,8 +42,7 @@ const Components = () => {
             <ImageSlider />
             <StarRating />
             <RandomColorGenerator />
-            <Accordion /> 
-           
+            <Accordion />
         </>
     );
 };
