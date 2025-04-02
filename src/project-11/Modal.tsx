@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import ComponentWrapper from '../components/ComponentWrapper';
-import useOnClickOutsideComponent from '../hooks/useOnClickOutsideComponent';
+import useOnClickOutsideComponent from '../project-17/useOnClickOutsideComponent';
 
 const Modal = () => {
     return (

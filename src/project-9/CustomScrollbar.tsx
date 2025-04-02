@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import ComponentWrapper from '../components/ComponentWrapper';
-import useFetch from '../hooks/useFetch';
+import useFetch from '../project-16/useFetch';
 
 type dummyData = {
     products: products[];
