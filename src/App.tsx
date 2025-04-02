@@ -16,6 +16,7 @@ import SearchAutoCompleteApi from './project-13/SearchAutoCompleteApi';
 import TicTacToe from './project-14/TictTacToe';
 import FeatureFlags from './project-15/FeatureFlags';
 import FeatureFlagsProvider from './project-15/Context';
+import WindowResize from './project-18';
 
 function App() {
     return <RouterProvider router={router}></RouterProvider>;
@@ -26,6 +27,7 @@ export default App;
 const Components = () => {
     return (
         <>
+            <WindowResize/>
             <FeatureFlagsProvider>
                 <FeatureFlags />
             </FeatureFlagsProvider>
