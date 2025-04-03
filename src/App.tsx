@@ -17,6 +17,7 @@ import TicTacToe from './project-14/TictTacToe';
 import FeatureFlags from './project-15/FeatureFlags';
 import FeatureFlagsProvider from './project-15/Context';
 import WindowResize from './project-18';
+import ScrollToBottomOrTop from './project-19/scrollToBottomOrTop';
 
 function App() {
     return <RouterProvider router={router}></RouterProvider>;
@@ -27,6 +28,7 @@ export default App;
 const Components = () => {
     return (
         <>
+            <ScrollToBottomOrTop/>
             <WindowResize/>
             <FeatureFlagsProvider>
                 <FeatureFlags />

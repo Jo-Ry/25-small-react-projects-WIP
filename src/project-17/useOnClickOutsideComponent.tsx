@@ -32,7 +32,6 @@ const UseOnClickOutsideComponent = <T extends React.RefObject<unknown>>(
                 console.log('in');
                 return;
             }
-            console.log('out');
 
             handler(event);
         };

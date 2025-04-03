@@ -1,0 +1,17 @@
+.scroll-to-bottom-or-top {
+    button {
+        margin-inline: auto;
+        padding: 1rem 2rem;
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    ul {
+        padding: 0;
+        text-align: center;
+
+        li {
+            padding-block-end: 0.3rem;
+        }
+    }
+}
