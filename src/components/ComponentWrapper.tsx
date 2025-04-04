@@ -12,7 +12,7 @@ type ComponentWrapperType = {
 const ComponentWrapper = ({ view, title, titleClassname, style, className, children }: ComponentWrapperType) => {
     return (
         <section style={style}>
-            {title && <h2 className={`title ${titleClassname}`}> {title}</h2>}
+            {title && <h2 className={`title ${titleClassname || ''}`}> {title}</h2>}
             <div className= {`${view === '' ? '' : 'base '}${view}${className ? ' ' + className : ''}`}>
             {children}
             </div>
