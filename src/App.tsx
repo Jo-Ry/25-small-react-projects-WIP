@@ -17,6 +17,7 @@ import TicTacToe from './project-14/TictTacToe';
 import FeatureFlags from './project-15/FeatureFlags';
 import FeatureFlagsProvider from './project-15/Context';
 import WindowResize from './project-18';
+import ScrollToParticularPosition from './project-20/ScrollToParticularPosition';
 import ScrollToBottomOrTop from './project-19/scrollToBottomOrTop';
 
 function App() {
@@ -29,6 +30,7 @@ const Components = () => {
     return (
         <>
             <ScrollToBottomOrTop/>
+            <ScrollToParticularPosition/>
             <WindowResize/>
             <FeatureFlagsProvider>
                 <FeatureFlags />
