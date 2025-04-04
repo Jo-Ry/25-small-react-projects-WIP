@@ -1,0 +1,38 @@
+.weather-data {
+    background-color: aquamarine;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.281);
+    padding: 1.8rem;
+    width: 100%;
+    max-width: 700px;
+
+    &__form {
+        display: flex;
+        gap: 1rem;
+        
+        input {
+            flex: 1;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            white-space: nowrap;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+        
+        p {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
