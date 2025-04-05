@@ -21,6 +21,18 @@ import ScrollToBottomOrTop from './project-19/ScrollToBottomOrTop';
 import ScrollToParticularPosition from './project-20/ScrollToParticularPosition';
 import WeatherApp from './project-21/WeatherApp';
 
+// Project 22
+import Home from './project-22/pages/home';
+import FoodRecipe from './project-22/pages/foodRecipe';
+import Favorites from './project-22/pages/favorites';
+import PageLayout from './project-22/layouts/PageLayout';
+
+/* 
+    Note: This router configuration is simplified for learning purposes and does not include error boundaries 
+    or a 'catch-all' route for unmatched paths. For a more robust implementation, refer to my 
+    'react-supabase-boilerplate' repository, where these scenarios are handled properly.
+*/
+
 function App() {
     return <RouterProvider router={router}></RouterProvider>;
 }
@@ -31,11 +43,11 @@ const Components = () => {
     return (
         <>
             <WeatherApp />
-            <ScrollToBottomOrTop/>
-            <ScrollToParticularPosition/>
-            <WindowResize/>
+            <ScrollToBottomOrTop />
+            <ScrollToParticularPosition />
+            <WindowResize />
             <FeatureFlagsProvider>
-                <FeatureFlags />
+            <FeatureFlags />
             </FeatureFlagsProvider>
             <TicTacToe />
             <SearchAutoCompleteApi />
@@ -59,5 +71,23 @@ const router = createBrowserRouter([
     {
         path: '',
         element: <Components />,
+    },
+    {
+        path: '/food-recipes',
+        element: <PageLayout />,
+        children: [
+            {
+                path: '', // show all food recipes
+                element: <Home />,
+            },
+            {
+                path: ':recipe', // show a single food recipe
+                element: <FoodRecipe />,
+            },
+            {
+                path: 'favorites', // show all favorites
+                element: <Favorites />,
+            },
+        ],
     },
 ]);

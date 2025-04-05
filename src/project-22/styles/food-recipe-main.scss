@@ -1,0 +1,9 @@
+
+/*
+ * This is the main SCSS file for the Food Recipe project.
+ */
+
+// specify the pages here using @forward
+@forward './pages/favorites';
+@forward './pages/food-recipe';
+@forward './pages/home';
